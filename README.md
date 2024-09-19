@@ -1,0 +1,1 @@
+# AutomationUpdateListesPubliquesVersBitrix24
