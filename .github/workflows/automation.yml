@@ -24,11 +24,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Créer config.ini à partir des secrets
+      - name: Créer config.ini depuis les secrets GitHub
         run: |
           echo "[BITRIX]" > config.ini
-          echo "url = ${{ secrets.BITRIX_URL }}" >> config.ini
-          echo "token = ${{ secrets.BITRIX_TOKEN }}" >> config.ini
+          echo "BITRIX_DOMAIN = ${{ secrets.BITRIX_DOMAIN }}" >> config.ini
+          echo "BITRIX_TOKEN = ${{ secrets.BITRIX_TOKEN }}" >> config.ini
 
       - name: Exécuter le script Python
         run: |
